@@ -1,0 +1,66 @@
+$colorTextWhite: #ffffff;
+$backgroundColor: #867f7f;
+$backgroundColorContent: #36474b;
+$ColorBlack: #000000;
+
+.block_all_in_one_tools
+{
+    background-color: $backgroundColor;
+    color: $colorTextWhite;
+}
+.block_content_page
+{
+    background-color: $backgroundColorContent;
+    color: $ColorBlack;
+}
+.block_protect_content
+{
+    background-color: $ColorBlack;
+    color: $colorTextWhite;
+}
+.block_start_point
+{
+    background-color: $ColorBlack;
+    color: $colorTextWhite;
+}
+.get_started_block
+{
+    background-color: $backgroundColor
+}
+.link_get_started
+{
+    color: $ColorBlack;
+}
+.pricing_plans_block
+{
+    background-color: $backgroundColorContent;
+    color: $ColorBlack;
+}
+.questions_page
+{
+    background-color: $ColorBlack;
+    color: $colorTextWhite;
+}
+.customer_support
+{
+    background-color: $backgroundColorContent;
+    color: $colorTextWhite;
+}
+.start_trial_block
+{
+    background-color: $ColorBlack;
+    color: $colorTextWhite;
+}
+.footer_page
+{
+    background-color: $ColorBlack;
+    color: $colorTextWhite;
+}
+.link_text_p5
+{
+    color: $colorTextWhite;
+}
+.link_text_white
+{
+    color: $colorTextWhite;
+}
