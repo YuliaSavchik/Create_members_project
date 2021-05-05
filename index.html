@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="" id="theme-link">
     <title>Squarespace</title>
 </head>
@@ -33,7 +33,7 @@
                     </div>
                     <div class="home_page_navigation_button">
                         <div class="home_page_navigation_button_log">
-                            <a class="link_button_lod" href="#">LOG IN</a>
+                            <a class="link_button_log" href="#">LOG IN</a>
                         </div>
                         <button class="button_change_theme">CHANGE THEME</button>
                     </div>
@@ -51,6 +51,22 @@
                     <div class="home_page_text_buttun">
                         <button class="home_page_button_get_started">GET STARTED</button>
                     </div>
+                </div>
+            </div>
+            <div class="page_for_log_in">
+                <form class="form_log_in" id="forma" name="registering">
+                    <p class="string_form">
+                        <label for="login">USERNAME</label>
+                        <input id="login" type="text" class="input_login">
+                    </p>
+                    <p class="stiring_form">
+                        <label for="password">PASSWORD</label>
+                        <input id="pass" type="password" class="input_pass">
+                    </p>
+                    <button id="sign_in" class="button_log_in" type="submit">Sign in</button>
+                </form>
+                <div class="close_form">
+                    <i class="fas fa-times fa-2x"></i>
                 </div>
             </div>
         </div>
@@ -644,10 +660,19 @@
             <div class="arrow_page_top">
                 <i class="fas fa-angle-double-up fa-3x"></i>
             </div>
-            
+            <div class="page_currency">
+                <div class="currency">
+                    <div class="currency_usd"><i class="fas fa-dollar-sign"></i> USD</div>
+                    <div class="currency_eur"><i class="fas fa-euro-sign"></i> EUR</div>
+                    <div class="currency_rus"><i class="fas fa-ruble-sign"></i> RUS</div>
+                </div>
+                <div class="close_currency">
+                    <i class="fas fa-times fa-2x"></i>
+                </div>
+            </div>
         </div>
     </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

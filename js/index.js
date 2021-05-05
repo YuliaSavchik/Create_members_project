@@ -1,24 +1,22 @@
-(()=>
-{
-    $(window).on('scroll' , function(){
-        if($('html').scrollTop() > 1600)
+$(window).on('scroll' , function(){
+    if($('html').scrollTop() > 1600)
+    {
+        $('.animation_one').fadeIn(1000);
+        if($(window).scrollTop() > 2200)
         {
-            $('.animation_one').fadeIn(1000);
-            if($(window).scrollTop() > 2200)
+            $('.animation_two').fadeIn(1000);
+            if($(window).scrollTop() > 2700)
             {
-                $('.animation_two').fadeIn(1000);
-                if($(window).scrollTop() > 2700)
+                $('.animation_three').fadeIn(1000);
+                if($(window).scrollTop() > 3200)
                 {
-                    $('.animation_three').fadeIn(1000);
-                    if($(window).scrollTop() > 3200)
-                    {
-                        $('.animation_four').fadeIn(1000);
-                    }
+                    $('.animation_four').fadeIn(1000);
                 }
             }
         }
-    })
-})();
+    }
+});
+
 let StartSlidesOne = (IndexSldOne = null , nowSldOne = false , prevSldOne = false) =>
 {
     let sldOne = () =>
@@ -175,8 +173,8 @@ $('.arrow_page_top').on('click' , function(e)
 });
 
 const link = $("#theme-link");
-const lightTheme = "../styles/styles-light.css";
-const darkTheme = "../styles/style-dark.css";
+const lightTheme = "styles/styles-light.css";
+const darkTheme = "styles/style-dark.css";
 
 $(function() {
     const Theme = localStorage.getItem('theme');
@@ -203,6 +201,95 @@ const ChangeTheme = () =>
     link.attr("href", currTheme);
     localStorage.setItem('theme' , theme);
 }
-
 $('.button_change_theme').on("click", ChangeTheme );
-console.log('test');
+
+$('.link_button_log').on('click', function(e)
+{
+    e.preventDefault();
+    $('.page_for_log_in').css({'display' : 'flex'});
+});
+let userNameIsTrue;
+let passIsTrue;
+$('#login').blur(function()
+{
+    userNameIsTrue = /^[a-z0-9_-]{3,16}$/.test(event.target.value);
+    if(userNameIsTrue)
+    {
+        $('#login').addClass('success');
+        $('#login').removeClass('error');
+    }
+    else
+    {
+        $('#login').addClass('error');
+        $('#login').removeClass('success');
+    }
+});
+$('#pass').blur(function()
+{
+    passIsTrue = /\d+/.test(event.target.value);
+    if(passIsTrue)
+    {
+        $('#pass').addClass('success');
+        $('#pass').removeClass('error');
+    }
+    else
+    {
+        $('#pass').addClass('error');
+        $('#pass').removeClass('success');
+    }
+});
+$('#sign_in').on('click' , function(e)
+{
+    e.preventDefault();
+    if(userNameIsTrue == true && passIsTrue == true)
+    {
+        alert('Данные введены успешно!');
+        console.log($('.input_login').val());
+        console.log($('.input_pass').val());
+        $('.page_for_log_in').css({'display' : 'none'});
+    }
+    else
+        alert('Одно из полей введено неправильно!'); 
+});
+$('.close_form').on('click', function(e)
+{
+    e.preventDefault();
+    $('.page_for_log_in').css({'display' : 'none'});
+});
+$(window).on('scroll' , function()
+{
+    if($('html').scrollTop() > 400)
+    $('.page_for_log_in').css({'display' : 'none'});
+});
+
+$('.money').on('click' , function(e)
+{
+    e.preventDefault();
+    $('.page_currency').css({'display' : 'flex'});
+});
+$('.currency_eur').on('click' , function(e)
+{
+    e.preventDefault();
+    let textEur = $('.currency_eur').text();
+    $('.eng').text('€' + textEur);
+    $('.page_currency').css({'display' : 'none'});
+});
+$('.currency_rus').on('click' , function(e)
+{
+    e.preventDefault();
+    let textRus = $('.currency_rus').text();
+    $('.eng').text('₽' + textRus);
+    $('.page_currency').css({'display' : 'none'});
+});
+$('.currency_usd').on('click' , function(e)
+{
+    e.preventDefault();
+    let textUsd = $('.currency_usd').text();
+    $('.eng').text('$' + textUsd);
+    $('.page_currency').css({'display' : 'none'});
+});
+$('.close_currency').on('click' , function(e)
+{
+    e.preventDefault();
+    $('.page_currency').css({'display' : 'none'});
+});
