@@ -126,7 +126,7 @@ button:hover {
 }
 
 .home_page_navigation {
-  width: 410px;
+  width: 420px;
   height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,8 +166,22 @@ button:hover {
   text-decoration: underline;
 }
 
+.change_theme {
+  width: 30px;
+  height: 30px;
+  padding-top: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.theme_sun {
+  display: none;
+}
+
 .home_page_navigation_button {
-  width: 322px;
+  width: 396px;
   height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -194,7 +208,7 @@ button:hover {
   text-decoration: underline;
 }
 
-.home_page_button_get_started, .button_change_theme {
+.home_page_button_get_started {
   width: 153px;
   height: 56px;
   border-radius: 0;
