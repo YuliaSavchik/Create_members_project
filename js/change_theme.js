@@ -40,3 +40,7 @@ const ChangeTheme = () =>
     localStorage.setItem('theme' , theme);
 }
 $('.change_theme').on("click", ChangeTheme);
+
+
+
+
